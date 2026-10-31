@@ -1,0 +1,45 @@
+@use '../style_layout.scss' as lm;
+
+header{
+    @extend %base-layout;
+    height: 10vh;
+    border-bottom: rgb(230, 230, 230) 1px dashed;
+    background-color: #F7F6FF;
+    nav{
+        @include lm.container-layout(70%, 80%);
+        .rightNav{
+            @include lm.container-layout(65%, 100%);
+            div{
+                @include lm.container-layout(70%, 100%);
+                a{
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .leftNav{
+            @include lm.container-layout(23%, 100%);
+            button{
+                @include lm.greenButton(50%, 50%);
+                font-size: 1.1rem;
+            }:nth-of-type(1){
+                color: #1DBF73;
+                background-color: #F2F0FE;
+                width: 60%;
+                &:hover{
+                    background-color: #1DBF73;
+                    color: white;
+                }
+            }
+            :nth-of-type(2){
+                width: 35%;
+                background-color: #1DBF73;
+                color: white;
+                &:hover{
+                    background-color: white;
+                    color: #1DBF73;
+                }
+            }
+        }
+    }
+}

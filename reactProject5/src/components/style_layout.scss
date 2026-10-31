@@ -1,0 +1,37 @@
+%base-layout {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin container-layout($width, $height){
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin container-layout-column($width, $height){
+    width: $width;
+    height: $height;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin greenButton($width, $height){
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1DBF73;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    &:hover{
+        background-color: white;
+        border: #1DBF73 1px solid;
+        border-radius: 20px;
+        color: #1DBF73;
+    }
+}
