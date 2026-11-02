@@ -24,15 +24,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1DBF73;
-    border: none;
-    border-radius: 20px;
-    color: white;
+    background-color: white;
+    border: #1DBF73 1px solid;
+    border-radius: 25px;
+    color: #1DBF73;
     &:hover{
-        background-color: white;
-        border: #1DBF73 1px solid;
-        border-radius: 20px;
-        color: #1DBF73;
+        background-color: #1DBF73;
+        border: none;
+        color: white;
     }
 }
 @mixin orangeButton{
@@ -46,4 +45,17 @@
         color: #FBA457;
         border-color: #FBA457;
     }
+}
+@mixin cardBtn($width, $height){
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F0FE;
+    border: none;
+    border-radius: 25px;
+    color: #1DBF73;
+    font-size: 1.2rem;
+    font-weight: 600;
 }

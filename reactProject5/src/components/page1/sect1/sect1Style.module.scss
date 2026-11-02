@@ -4,7 +4,7 @@
 .section{
     @extend %base-layout;
     height: 70vh;
-    background-color: #F7F6FF;
+    border-bottom: rgb(230, 230, 230) 1px dashed;
     .container{
         @include lm.container-layout(70%, 100%);
         .right{
