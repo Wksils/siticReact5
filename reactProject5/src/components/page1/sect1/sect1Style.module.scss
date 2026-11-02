@@ -1,0 +1,69 @@
+@use '../../style_layout.scss' as lm;
+
+
+.section{
+    @extend %base-layout;
+    height: 70vh;
+    background-color: #F7F6FF;
+    .container{
+        @include lm.container-layout(70%, 100%);
+        .right{
+            height: 100%;
+            width: 48%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{width: 100%; height: auto;}
+        }
+        .left{
+            margin-bottom: 4%;
+            align-self: flex-end;
+            h1{font-size: 2.6rem;}
+            p{font-size: 1.3rem}
+            .vorki{width: 85%;}
+            @include lm.container-layout-column(48%, 80%);
+            .text{
+                @include lm.container-layout(85%, 12%);
+                background-color: #F2F0FE;
+                border-radius: 30px;
+                input{
+                    border-radius: 30px;
+                    width: 70%;
+                    height: 100%;
+                    background-color: transparent;
+                    padding-left: 5%;
+                    border: none;
+                }::placeholder{font-size: 1.1rem;}
+                button{
+                    width: 30%;
+                    height: 100%;
+                    border-radius: 30px;
+                    border: none;
+                    color: white;
+                    background-color: #FBA457;
+                    font-size: 1.1rem;
+                }
+            }
+            .choose{
+                @include lm.container-layout-column(90%, 45%);
+                justify-content: space-evenly;
+                p{font-size: 1.1rem;}
+                div{
+                    height: 80%;
+                    flex-wrap: wrap;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    button{
+                        width: auto;
+                        height: 20%;
+                        padding: 1% 3%;
+                        margin: 2% 2% 2% 0;
+                        font-size: 1rem;
+                        @include lm.orangeButton();
+                    }
+                }
+            }
+        }
+    }
+}

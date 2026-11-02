@@ -35,3 +35,15 @@
         color: #1DBF73;
     }
 }
+@mixin orangeButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    border: #F2F0FE 1px solid;
+    &:hover{
+        color: #FBA457;
+        border-color: #FBA457;
+    }
+}

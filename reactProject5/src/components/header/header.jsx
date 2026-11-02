@@ -1,23 +1,24 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Photo } from '../../Photo'
-import './header.scss'
+import classes from'./header.module.scss'
 
 export default function Header(){
+    const active = ({isActive}) => `${classes.navlink} ${isActive ? classes.active : ""}`
     return(
         <>
             <header>
                 <nav>
-                    <div className="rightNav">
+                    <div className={classes.rightNav}>
                         <img src={Photo.worktap} alt="" />
                         <div>
-                            <Link>Биржа</Link>
-                            <Link>Ворки</Link>
-                            <Link>Конкурсы</Link>
-                            <Link>Создать ворк</Link>
-                            <Link>Создать заказ</Link>
+                            <NavLink>Биржа</NavLink>
+                            <NavLink>Ворки</NavLink>
+                            <NavLink>Конкурсы</NavLink>
+                            <NavLink>Создать ворк</NavLink>
+                            <NavLink>Создать заказ</NavLink>
                         </div>
                     </div>
-                    <div className='leftNav'>
+                    <div className={classes.leftNav}>
                         <button>Регистрация</button>
                         <button>Войти</button>
                     </div>
