@@ -13,6 +13,9 @@ import user5 from './assets/user5.png'
 import star1 from './assets/star1.png'
 import star2 from './assets/star2.png'
 import star3 from './assets/star3.png'
+import task1 from './assets/task1.svg'
+import task2 from './assets/task2.svg'
+import task3 from './assets/task3.svg'
 
 export const Photo = {
     worktap:worktap,
@@ -29,5 +32,8 @@ export const Photo = {
     user5:user5,
     star1:star1,
     star2:star2,
-    star3:star3
+    star3:star3,
+    task1:task1,
+    task2:task2,
+    task3:task3
 }
