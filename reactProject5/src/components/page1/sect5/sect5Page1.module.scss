@@ -1,0 +1,49 @@
+@use '../../style_layout.scss' as lm;
+
+.section{
+    @extend %base-layout;
+    height: 63vh;
+    background-image: url('../../../assets/bgS5P1.png');
+    background-size: cover;
+    .container{
+        background-color: transparent;
+        @include lm.container-layout-column(70%, 80%);
+        .info{
+            background-color: transparent;
+            @include lm.container-layout-column(40%, 100%);
+            h2{
+                background-color: transparent;
+                color: white;
+                font-weight: 500;
+            }
+            p{background-color: transparent; color: white; font-size: 1.3rem;}
+            .cardInfo{
+                @include lm.container-layout-column(100%, 60%);
+                background-color: transparent;
+                div{
+                    padding-left: 5%;
+                    border-radius: 25px;
+                    @include lm.container-layout(100%, 28%);
+                    justify-content: flex-start;
+                    gap: 5%;
+                    p{color: black;
+                    font-size: 1rem;}
+                }
+            }
+        }
+        button{
+            @include lm.greenButton(40%, 15%);
+            border-radius: 55px;
+            background-color: #5E4EDB;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            &:hover{
+                border: #5E4EDB 3px solid;
+                color: #5E4EDB;
+                background-color: transparent;
+            }
+        }
+    }
+}

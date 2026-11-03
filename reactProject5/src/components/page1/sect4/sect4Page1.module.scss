@@ -1,0 +1,17 @@
+@use '../../style_layout.scss' as lm;
+
+.section{
+    @extend %base-layout;
+    height: 50vh;
+    .container{
+        @include lm.container-layout-column(70%, 60%);
+        .tasks{
+            @include lm.container-layout(100%, 70%);
+            div{
+                @include lm.container-layout-column(30%, 85%);
+                img{width: 25%; height: 40%;}
+                p{font-size: 0.9rem;}
+            }
+        }
+    }
+}

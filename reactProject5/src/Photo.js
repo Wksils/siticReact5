@@ -16,6 +16,10 @@ import star3 from './assets/star3.png'
 import task1 from './assets/task1.svg'
 import task2 from './assets/task2.svg'
 import task3 from './assets/task3.svg'
+import creditCard from './assets/creditCard.svg'
+import clock from './assets/clock.svg'
+import money from './assets/money.svg'
+
 
 export const Photo = {
     worktap:worktap,
@@ -35,5 +39,8 @@ export const Photo = {
     star3:star3,
     task1:task1,
     task2:task2,
-    task3:task3
+    task3:task3,
+    creditCard:creditCard,
+    money:money,
+    clock:clock
 }
