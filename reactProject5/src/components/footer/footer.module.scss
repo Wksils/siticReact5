@@ -1,0 +1,45 @@
+@use '../style_layout.scss' as lm;
+
+footer{
+    @extend %base-layout;
+    height: 50vh;
+    .container{
+        @include lm.container-layout-column(70%, 80%);
+        align-items: center;
+        .niz{
+            height: 15%;
+            font-weight: 500;
+        }
+        .topCont{
+            @include lm.container-layout(100%, 80%);
+            align-items: flex-start;
+            ul{
+
+                height: auto;
+                width: 20%;
+                li{
+                    margin: 5% 0;
+                    list-style: none;
+                    p{
+                        font-size: 1.4rem;
+                        font-weight: 650;
+                        margin-bottom: 10%;
+                        margin-top: 0;
+                    }
+                }
+            }
+            .endDiv{
+                p{
+                    font-size: 1.4rem;
+                    font-weight: 650;
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                }
+                @include lm.container-layout-column(25%, 40%);
+                div{
+                    @include lm.container-layout(85%, 40%);
+                }
+            }
+        }
+    }
+}

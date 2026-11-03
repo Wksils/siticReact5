@@ -19,6 +19,10 @@ import task3 from './assets/task3.svg'
 import creditCard from './assets/creditCard.svg'
 import clock from './assets/clock.svg'
 import money from './assets/money.svg'
+import facebook from './assets/facebook.svg'
+import insta from './assets/insta.svg'
+import linkedin from './assets/linkedin.svg'
+import twitter from './assets/twitter.svg'
 
 
 export const Photo = {
@@ -42,5 +46,9 @@ export const Photo = {
     task3:task3,
     creditCard:creditCard,
     money:money,
-    clock:clock
+    clock:clock,
+    facebook:facebook,
+    insta:insta,
+    twitter:twitter,
+    linkedin:linkedin
 }
