@@ -11,6 +11,8 @@ header{
             @include lm.container-layout(65%, 100%);
             div{
                 @include lm.container-layout(70%, 100%);
+                justify-content: flex-start;
+                gap: 5%;
                 a{
                     font-weight: 500;
                     font-size: 1rem;
@@ -39,6 +41,15 @@ header{
                     background-color: white;
                     color: #1DBF73;
                 }
+            }
+        }
+        .profile{
+            @include lm.container-layout(35%, 100%);
+            .imgs{
+                @include lm.container-layout(30%, 100%)
+            }
+            .person{
+                @include lm.container-layout(60%, 100%)
             }
         }
     }

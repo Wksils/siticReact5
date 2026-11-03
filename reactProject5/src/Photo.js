@@ -27,6 +27,8 @@ import star from './assets/star.png'
 import bell from './assets/bell.png'
 import mes from './assets/mes.png'
 import ava from './assets/ava.png'
+import strelkaVniz from './assets/strelkaVniz.png'
+import strelkaVnizZel from './assets/strelkaVnizZel.png'
 
 
 export const Photo = {
@@ -58,5 +60,7 @@ export const Photo = {
     star:star,
     bell:bell,
     mes:mes,
-    ava:ava
+    ava:ava,
+    strelkaVniz:strelkaVniz,
+    strelkaVnizZel:strelkaVnizZel
 }

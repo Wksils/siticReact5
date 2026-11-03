@@ -1,0 +1,97 @@
+@use '../../style_layout.scss' as lm;
+
+.section{
+    @extend %base-layout;
+    height: 250vh;
+    background-color: white;
+    .container{
+        background-color: transparent;
+        @include lm.container-layout-column(70%, 95%);
+        .head{
+            @include lm.container-layout(100%, 3%);
+            background-color: white;
+            h2{background-color: white; font-weight: 600}
+            div{
+                @include lm.container-layout(55%, 100%);
+                background-color: white;
+                input{
+                    height: 60%;
+                    width: 25%;
+                    background-color: white;
+                    border-radius: 25px;
+                    border: #F2F0FE 1px solid;
+                    padding-left: 2.5%;
+                }
+                p{background-color: white; font-size: 3rem; color: #F2F0FE; font-weight: 300}
+                button{
+                    background-color: white;
+                    border-radius: 25px;
+                    border: #F2F0FE 1px solid;
+                    width: 35%;
+                    height: 60%;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-left: 5%;
+                }
+            }
+        }
+        .dsa{
+            align-self: center;
+            @include lm.greenButton(20%, 2%);
+            border-radius: 40px;
+            font-size: 1.3rem;
+        }
+        .main{
+            background-color: white;
+            @include lm.container-layout-column(100%, 92%);
+            .card{
+                p, img, h3,div{background-color: white;}
+                border-radius: 25px;
+                border: #F2F0FE 1px solid;
+                padding: 1% 2%;
+                @include lm.container-layout(100%, 8%);
+                background-color: white;
+                .left{
+                    h3{
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                    background-color: white;
+                    @include lm.container-layout-column(50%, 100%);
+                    .info{
+                        img{
+                            width: 25%;
+                            height: auto;
+                        }
+                        .asd{
+                            @include lm.container-layout-column(65%, 80%);
+                            div{
+                                @include lm.container-layout(80%, 40%);
+                                p{font-size: 0.8rem;}
+                                img{
+                                    width: auto;
+                                    height: 70%;
+                                }
+                            }
+                        }
+                        @include lm.container-layout(70%, 80%);
+                        background-color: white;
+                    }
+                }
+                .right{
+                    @include lm.container-layout-column(30%, 100%);
+                    align-items: end;
+                    .top{
+                        @include lm.container-layout-column(100%, 40%);
+                        align-items: end;
+                        h3{color: #1DBF73;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                        }
+                        p{font-size: 0.9rem;}
+                    }
+                }
+            }
+        }
+    }
+}

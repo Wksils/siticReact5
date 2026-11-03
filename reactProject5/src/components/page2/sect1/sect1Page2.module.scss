@@ -2,4 +2,59 @@
 
 .section{
     @extend %base-layout;
+    height: 75vh;
+    background-image: url('../../../assets/bgS1P2.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    .container{
+        background-color: transparent;
+        @include lm.container-layout-column(70%, 60%);
+        align-items: center;
+        text-align: center;
+        img{width: 3%;height: auto;}
+        h1{
+            border-color: transparent;
+            width: 85%;
+            font-size: 2.3rem;
+            margin-bottom: 5%;
+        }
+        h2{font-weight: 500; font-size: 1.5rem; margin-top: 3%}
+        .text{
+                @include lm.container-layout(45%, 12%);
+                background-color: #F2F0FE;
+                border-radius: 30px;
+                input{
+                    border-radius: 30px;
+                    width: 70%;
+                    height: 100%;
+                    background-color: transparent;
+                    padding-left: 5%;
+                    border: none;
+                }::placeholder{font-size: 1.1rem;}
+                button{
+                    width: 25%;
+                    height: 100%;
+                    border-radius: 30px;
+                    border: none;
+                    color: white;
+                    background-color: #FBA457;
+                    font-size: 1.1rem;
+                }
+        }
+        .choose{
+            height: 25%;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                width: auto;
+                height: 30%;
+                padding: 0.5% 3%;
+                margin: 2% 2% 2% 0;
+                font-size: 1rem;
+                @include lm.orangeButton();     
+            }
+        }
+    }
 }
