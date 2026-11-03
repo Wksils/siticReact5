@@ -23,6 +23,10 @@ import facebook from './assets/facebook.svg'
 import insta from './assets/insta.svg'
 import linkedin from './assets/linkedin.svg'
 import twitter from './assets/twitter.svg'
+import star from './assets/star.png'
+import bell from './assets/bell.png'
+import mes from './assets/mes.png'
+import ava from './assets/ava.png'
 
 
 export const Photo = {
@@ -50,5 +54,9 @@ export const Photo = {
     facebook:facebook,
     insta:insta,
     twitter:twitter,
-    linkedin:linkedin
+    linkedin:linkedin,
+    star:star,
+    bell:bell,
+    mes:mes,
+    ava:ava
 }

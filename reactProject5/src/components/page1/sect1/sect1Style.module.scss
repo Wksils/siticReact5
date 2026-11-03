@@ -23,7 +23,7 @@
             .vorki{width: 85%;}
             @include lm.container-layout-column(48%, 80%);
             .text{
-                @include lm.container-layout(85%, 12%);
+                @include lm.container-layout(85%, 10%);
                 background-color: #F2F0FE;
                 border-radius: 30px;
                 input{

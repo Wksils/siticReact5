@@ -11,7 +11,7 @@ export default function Header(){
                     <div className={classes.rightNav}>
                         <img src={Photo.worktap} alt="" />
                         <div>
-                            <NavLink>Биржа</NavLink>
+                            <NavLink to='/Page2' className={active}>Биржа</NavLink>
                             <NavLink>Ворки</NavLink>
                             <NavLink>Конкурсы</NavLink>
                             <NavLink>Создать ворк</NavLink>
