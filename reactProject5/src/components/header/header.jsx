@@ -16,7 +16,7 @@ export default function Header(){
                             <NavLink to='/Page2' className={active}>Биржа</NavLink>
                             <NavLink>Ворки</NavLink>
                             <NavLink>Конкурсы</NavLink>
-                            {location.pathname != '/Page2' && './Page3' && (
+                            {location.pathname !== '/Page2' && location.pathname !== '/Page3' && (
                                 <NavLink>Создать ворк</NavLink>
                             )}
                             <NavLink>Создать заказ</NavLink>
@@ -28,7 +28,7 @@ export default function Header(){
                             <button>Войти</button>
                         </div>
                     )}
-                    {location.pathname === '/Page2' && (
+                    {(location.pathname === '/Page2' || location.pathname === '/Page3') &&(
                         <div className={classes.profile}>
                             <div className={classes.imgs}>
                                 <img src={Photo.star} alt="" />
@@ -36,7 +36,7 @@ export default function Header(){
                                 <img src={Photo.mes} alt="" />
                             </div>
                             <div className={classes.person}>
-                                <p>Ернар Ибрагимов</p>
+                                <NavLink to='/Page3' className={active}>Ернар Ибрагимов</NavLink>
                                 <img src={Photo.ava} alt="" />
                                 <img src={Photo.strelkaVniz} alt="" className={classes.strelka}/>
                             </div>

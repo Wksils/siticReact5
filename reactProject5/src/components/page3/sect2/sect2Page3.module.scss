@@ -1,0 +1,50 @@
+@use '../../style_layout.scss' as lm;
+
+.section{
+    @extend %base-layout;
+    height: 105vh;
+    .container{
+        @include lm.container-layout-column(70%, 90%);
+        .cardCont{
+            width: 100%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 3% 2%;
+            .card{
+                @include lm.container-layout-column(100%, 100%);
+                align-items: center;
+                button{
+                    @include lm.greenButton(100%, 100%);
+                    border: none;
+                    div{
+                        @include lm.container-layout-column(80%,50%);
+                        img{width: 30%;height: auto;}
+                        align-items: center;
+                        h3{font-size: 1.7rem; font-weight: 500;}
+                    }
+                }
+                img{width: 100%; height: auto;}
+                .cardDiv{
+                    @include lm.container-layout-column(80%, 20%);
+                    padding: 0% 1%;
+                    .title{
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                    }
+                    .price{
+                        font-size: 1.1rem;
+                        color: #1DBF73;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        button{
+            align-self: center;
+            @include lm.greenButton(17%, 5%);
+            font-size: 1.2rem;
+        }
+    }
+}

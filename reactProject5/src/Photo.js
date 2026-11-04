@@ -29,6 +29,10 @@ import mes from './assets/mes.png'
 import ava from './assets/ava.png'
 import strelkaVniz from './assets/strelkaVniz.png'
 import strelkaVnizZel from './assets/strelkaVnizZel.png'
+import ernar from './assets/ernar.png'
+import plus from './assets/plus.png'
+import siteDesign from './assets/siteDesign.png'
+import nikita from './assets/nikita.png'
 
 
 export const Photo = {
@@ -62,5 +66,9 @@ export const Photo = {
     mes:mes,
     ava:ava,
     strelkaVniz:strelkaVniz,
-    strelkaVnizZel:strelkaVnizZel
+    strelkaVnizZel:strelkaVnizZel,
+    ernar:ernar,
+    plus:plus,
+    siteDesign:siteDesign,
+    nikita:nikita
 }

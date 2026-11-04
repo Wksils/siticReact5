@@ -1,0 +1,65 @@
+@use '../../style_layout.scss' as lm;
+
+.section{
+    @extend %base-layout;
+    height: 75vh;
+    .container{
+        @include lm.container-layout(70%, 90%);
+        position: relative;
+        .btn{
+            position: fixed;
+            width: 22vw;
+            height: 8vh;
+            background-color: #FBA457;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border: none;
+            border-radius: 40px;
+            margin-left: -25%;
+            div{
+                background-color: transparent;
+                @include lm.container-layout(50%, 80%);
+                p{width: 80%; font-size: 1.1rem; background-color: transparent; color: white; text-align: left;}:last-of-type{text-align: center; width: 50%;}
+            }
+        }
+        .right{
+            width: 50%;
+            height: 100%;
+        }
+        .left{
+            @include lm.container-layout-column(48%, 60%);
+            h4{
+                color: #FBA457;
+                font-size: 1.4rem;
+            }
+            h1{
+                font-size: 2.3rem;
+                font-weight: 600;
+            }
+            p{font-size: 0.9rem;}
+            .choose{
+                height: 25%;
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                button{
+                    width: auto;
+                    height: 30%;
+                    padding: 0.5% 3%;
+                    margin: 2% 2% 2% 0;
+                    font-size: 1rem;
+                    @include lm.orangeButton();     
+                }
+            }
+            .info{
+                background-color: #F2F0FE;
+                padding: 2% 5%;
+                @include lm.container-layout(100%, 15%);
+                border-radius: 20px;
+                p{font-size: 1.1rem;}
+            }
+        }
+    }
+}
