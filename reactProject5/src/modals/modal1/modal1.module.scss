@@ -1,0 +1,73 @@
+@use '../../components/style_layout.scss' as lm;
+
+.container{
+    @include lm.modalContainer();
+    .containers2{
+        @include lm.container-layout(80% !important, 80%);
+        .right{
+            .text{
+                background-color: white;
+                margin-bottom: -85%;
+                position: absolute;
+                z-index: 3;
+                width: 80%;
+                height: 8%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                p{
+                    background-color: white;
+                    width: 95%;
+                    height: 60%;
+                color: black;}
+            }
+            position: relative;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .mySwiper{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                img{width: 100%; height: 100%;}
+                .swiper-pagination{
+                    background-color: transparent;
+                    width: 100% !important;
+                }
+                :global {
+                    .swiper-pagination.swiper-pagination-bullets-dynamic {
+                        padding-bottom: 20px; 
+                        width: max-content !important;    
+                        left: 50% !important;         
+                        transform: translateX(-50%) !important; 
+                        bottom: 5px !important;          
+                        background: transparent !important; 
+                        overflow: visible !important; 
+                        display: flex !important; 
+                        align-items: center !important;
+                        gap: 6px !important; 
+                    }
+                    --swiper-pagination-color: #FBA457;            
+                    --swiper-pagination-bullet-inactive-color: #FBA457; 
+                    --swiper-pagination-bullet-inactive-opacity: 0.6;
+                    --swiper-pagination-bullet-size: 20px; 
+                    .swiper-pagination-bullet {
+                        background-color: var(--swiper-pagination-bullet-inactive-color);
+                        aspect-ratio: 1 / 1 !important; 
+                        border-radius:    50% !important; 
+                    }
+                        
+                    .swiper-pagination-bullet-active {
+                        background-color: var(--swiper-pagination-color);
+                        width: var(--swiper-pagination-bullet-size) !important;
+                        height: var(--swiper-pagination-bullet-size) !important;
+                        transform: scale(1) !important;
+                    }
+                }
+            }
+        }
+    }
+}

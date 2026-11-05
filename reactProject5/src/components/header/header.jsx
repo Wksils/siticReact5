@@ -1,9 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 import { Photo } from '../../Photo'
+import { useState } from 'react';
+import Modal1 from '../../modals/modal1/modal1';
 import classes from'./header.module.scss'
 
 export default function Header(){
+    const [open, setOpen] = useState(false);
     const location = useLocation();
     const active = ({isActive}) => `${classes.navlink} ${isActive ? classes.active : ""}`
     return(
@@ -22,10 +25,15 @@ export default function Header(){
                             <NavLink>Создать заказ</NavLink>
                         </div>
                     </div>
-                    {location.pathname === '/Page1' && (
+                    {location.pathname === '/' && (
                         <div className={classes.leftNav}>
                             <button>Регистрация</button>
-                            <button>Войти</button>
+                            <button onClick={() => setOpen(true)} className={classes.voiti}>Войти</button>
+                            {open && (
+                                <Modal1 onClose={() => setOpen(false)}>
+                                    <button>asd</button>
+                                </Modal1>
+                            )}
                         </div>
                     )}
                     {(location.pathname === '/Page2' || location.pathname === '/Page3') &&(

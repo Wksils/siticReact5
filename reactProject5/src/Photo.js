@@ -33,6 +33,10 @@ import ernar from './assets/ernar.png'
 import plus from './assets/plus.png'
 import siteDesign from './assets/siteDesign.png'
 import nikita from './assets/nikita.png'
+import slide1 from './assets/slide1.jpg'
+import slide2 from './assets/slide2.jpg'
+import slide3 from './assets/slide3.jpg'
+import slide4 from './assets/slide4.jpg'
 
 
 export const Photo = {
@@ -70,5 +74,9 @@ export const Photo = {
     ernar:ernar,
     plus:plus,
     siteDesign:siteDesign,
-    nikita:nikita
+    nikita:nikita,
+    slide1:slide1,
+    slide2:slide2,
+    slide3:slide3,
+    slide4:slide4
 }

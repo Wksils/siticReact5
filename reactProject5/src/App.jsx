@@ -13,7 +13,7 @@ export default function App() {
       <BrowserRouter>
         <Header/>
         <Routes>
-            <Route path='/Page1' index element = {<Page1/>}/>
+            <Route path='/' index element = {<Page1/>}/>
             <Route path='/Page2' element = {<Page2/>}/>
             <Route path='/Page3' element={<Page3/>}/>
         </Routes>
