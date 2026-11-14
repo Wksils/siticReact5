@@ -4,6 +4,15 @@
     @include lm.modalContainer();
     .containers2{
         @include lm.container-layout(80% !important, 80%);
+        .left{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            background-color: white;
+            & :hover{ background-color: transparent !important}
+        }
         .right{
             .text{
                 background-color: white;
