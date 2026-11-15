@@ -5,7 +5,6 @@ import Modal1 from '../../modals/modal1/modal1';
 import classes from './header.module.scss';
 
 export default function Header() {
-  // Храним название открытого окна: 'register', 'login' или null
   const [activeModal, setActiveModal] = useState(null);
   const location = useLocation();
 
@@ -92,7 +91,7 @@ export default function Header() {
                         <label className={classes.checkboxes}>
                             <input type="checkbox" name="remember" /> Запомнить меня
                         </label>
-                        <NavLink to="/forgot-password" style={{ color: '#FBA457' }}>
+                        <NavLink onClick={() => setActiveModal('forgotPassword')}  style={{ color: '#FBA457' }}>
                             Забыли пароль?
                         </NavLink>
                         </div>
@@ -107,6 +106,55 @@ export default function Header() {
                           Зарегистрируйтесь бесплатно!
                         </span>
                         </p>
+                    </div>
+                  </div>
+                </div>
+              </Modal1>
+            )}
+
+            {activeModal === 'forgotPassword' && (
+              <Modal1 className={classes.Modaa} onClose={() => setActiveModal(null)}>
+                <div className={classes.contain}>
+                  <img src={Photo.worktap} alt="Worktap" />
+                  <div className={classes.modalInfo3}>
+                    <p>Забыли пароль...</p>
+                    <h3>Заполните поле ниже</h3>
+                    <div className={classes.modalDiv}>
+                      <p>E-mail</p>
+                      <input placeholder="E-mail" type="email" />
+                      <p>Код</p>
+                      <input placeholder="Код из почты" type="password" />
+                      
+                      <button onClick={() => setActiveModal('repitPass')}>Отправить код</button>
+                      
+                      <p className={classes.a} onClick={() => setActiveModal('login')}>
+                        Вспомнили пароль? {' '}
+                        <span
+                          style={{ color: '#FBA457', cursor: 'pointer' }}
+                        >
+                          Войдите
+                        </span>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </Modal1>
+            )}
+
+            {activeModal === 'repitPass' && (
+              <Modal1 className={classes.Modaa} onClose={() => setActiveModal(null)}>
+                <div className={classes.contain}>
+                  <img src={Photo.worktap} alt="Worktap" />
+                  <div className={classes.modalInfo3}>
+                    <p>Давайте восстановим Вам пароль</p>
+                    <h3>Придумайте новый пароль</h3>
+                    <div className={classes.modalDiv}>
+                      <p>Пароль</p>
+                      <input placeholder="E-mailПароль" type="email" />
+                      <p>Повтарите пароль</p>
+                      <input placeholder="Пароль" type="password" />
+                      
+                      <button>Изменить пароль</button>
                     </div>
                   </div>
                 </div>
